@@ -9,7 +9,7 @@ export default function Story() {
                         <div className="relative group">
                             <div className="absolute inset-0 bg-primary/10 translate-x-4 translate-y-4 rounded-2xl transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
                             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-gray-100 dark:border-white/10 shadow-2xl">
-                                <img alt="President of Yamaguchi Butsuryu" className="w-full h-full object-cover" src="/img/yamagutishatyounogazou.jpg" />
+                                <img alt="President of Yamaguchi Butsuryu" className="w-full h-full object-cover" src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/yamagutishatyounogazou.jpg`} />
                                 <div className="absolute bottom-0 inset-x-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
                                     <p className="text-2xl font-bold">山口 秀佳</p>
                                     <p className="text-sm tracking-widest opacity-80 uppercase">President, Yamaguchi Butsuryu</p>

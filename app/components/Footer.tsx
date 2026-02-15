@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
                     <div className="space-y-6">
                         <div className="flex items-center gap-2 mb-2">
-                            <img src="/img/header-logo.png" alt="ラクハコキット" className="h-10 w-auto object-contain brightness-0 invert" />
+                            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/header-logo.png`} alt="ラクハコキット" className="h-10 w-auto object-contain brightness-0 invert" />
                         </div>
                         <div className="text-gray-500 text-sm leading-relaxed space-y-4">
                             <div>

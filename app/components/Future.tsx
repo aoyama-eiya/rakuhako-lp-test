@@ -35,8 +35,8 @@ const AnimatedSection = ({ children, className = "", delay = 0 }: { children: Re
         <div
             ref={ref}
             className={`transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] transform will-change-transform ${isVisible
-                    ? 'opacity-100 translate-y-0 scale-100 blur-0'
-                    : 'opacity-0 translate-y-16 scale-95 blur-md'
+                ? 'opacity-100 translate-y-0 scale-100 blur-0'
+                : 'opacity-0 translate-y-16 scale-95 blur-md'
                 } ${className}`}
             style={{ transitionDelay: `${delay}ms` }}
         >
@@ -116,7 +116,7 @@ export default function Future() {
                         <AnimatedSection className="relative group perspective-1000">
                             <div className="absolute inset-0 bg-primary/20 blur-[50px] rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
                             <img
-                                src="/img/sokujiwakaru.png"
+                                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/img/sokujiwakaru.png`}
                                 alt="即時わかる機能イメージ"
                                 className="relative w-full rounded-[2.5rem] shadow-2xl border-4 border-white transform transition-transform duration-700 group-hover:rotate-y-2 group-hover:scale-[1.02]"
                             />
@@ -138,7 +138,7 @@ export default function Future() {
                         <AnimatedSection className="lg:order-2 relative group perspective-1000">
                             <div className="absolute inset-0 bg-blue-500/20 blur-[50px] rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
                             <img
-                                src="/img/sinntyokugawakaru.png"
+                                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/img/sinntyokugawakaru.png`}
                                 alt="進捗がわかる機能イメージ"
                                 className="relative w-full rounded-[2.5rem] shadow-2xl border-4 border-white transform transition-transform duration-700 group-hover:-rotate-y-2 group-hover:scale-[1.02]"
                             />
@@ -160,7 +160,7 @@ export default function Future() {
                         <AnimatedSection className="relative group perspective-1000">
                             <div className="absolute inset-0 bg-green-500/20 blur-[50px] rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
                             <img
-                                src="/img/saityuumonsiyasui.png"
+                                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/img/saityuumonsiyasui.png`}
                                 alt="再注文しやすい機能イメージ"
                                 className="relative w-full rounded-[2.5rem] shadow-2xl border-4 border-white transform transition-transform duration-700 group-hover:rotate-y-2 group-hover:scale-[1.02]"
                             />

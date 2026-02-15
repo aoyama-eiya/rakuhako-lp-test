@@ -6,7 +6,7 @@ export default function Hero() {
             <nav className="absolute top-0 z-50 w-full border-b border-slate-100 glass-nav">
                 <div className="max-w-[1440px] mx-auto flex items-center justify-between px-12 h-20">
                     <div className="flex items-center gap-3">
-                        <img src="/img/header-logo.png" alt="ラクハコキット" className="h-10 w-auto object-contain" />
+                        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/header-logo.png`} alt="ラクハコキット" className="h-10 w-auto object-contain" />
                     </div>
                     <div className="hidden md:flex items-center gap-10">
                         <a className="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="#service">サービス紹介</a>
@@ -22,9 +22,9 @@ export default function Hero() {
                 {/* Background Image Container - Right Side */}
                 <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full z-0">
                     <img
-                        src="/img/fa-sutobyu-detukatte.jpg"
+                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/fa-sutobyu-detukatte.jpg`}
                         alt="Background"
-                        className="w-full h-full object-cover object-center lg:object-left"
+                        className="w-full h-full object-cover object-center lg:object-left blur-sm"
                     />
                     {/* Gradient Overlay for Fade Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/20 to-transparent lg:via-transparent"></div>
@@ -70,7 +70,7 @@ export default function Hero() {
                             <div className="relative lg:h-[580px] flex items-center justify-center">
                                 {/* Removed the person image container as it is now background */}
                                 <div className="absolute -bottom-12 -left-12 w-[850px] h-auto z-30 hidden lg:block filter drop-shadow-2xl">
-                                    <img src="/img/rakuhako-img.png" alt="Rakuhako Dashboard" className="w-full h-full object-contain" />
+                                    <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/rakuhako-img.png`} alt="Rakuhako Dashboard" className="w-full h-full object-contain" />
                                 </div>
                                 <div className="absolute -bottom-8 -right-8 bg-white p-7 rounded-[2rem] shadow-float border border-slate-100 w-[280px] z-40">
                                     <div className="flex items-center gap-3 mb-4">

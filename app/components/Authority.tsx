@@ -47,7 +47,7 @@ export default function Authority() {
                     </div>
                     <div className="relative">
                         <div className="rounded-3xl overflow-hidden shadow-[0_48px_80px_-16px_rgba(0,0,0,0.6)] border border-white/10 aspect-[4/3] group">
-                            <img alt="Large Industrial Warehouse" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="/img/soukonogazou.jpg" />
+                            <img alt="Large Industrial Warehouse" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/soukonogazou.jpg`} />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
                         </div>
                         <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-2xl flex items-center gap-6">

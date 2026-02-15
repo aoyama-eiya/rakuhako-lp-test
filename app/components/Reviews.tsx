@@ -43,7 +43,7 @@ export default function Reviews() {
                                 <div
                                     className="w-16 h-16 rounded-full bg-slate-100 border-2 border-slate-200 shrink-0"
                                     style={{
-                                        backgroundImage: "url('/img/avatars-group.png')",
+                                        backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH || ""}/img/avatars-group.png')`,
                                         backgroundPosition: review.bgPos,
                                         backgroundSize: "300% auto",
                                         backgroundRepeat: "no-repeat"
