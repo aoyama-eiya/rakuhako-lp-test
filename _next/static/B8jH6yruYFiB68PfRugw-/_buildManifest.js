@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/rakuhako-lp-test//_next/:path+",
+        "destination": "/rakuhako-lp-test/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
