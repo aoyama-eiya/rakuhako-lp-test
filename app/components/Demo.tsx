@@ -13,14 +13,14 @@ export default function Demo() {
                 </p>
             </header>
             <section className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
-                <div className="group bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-slate-100 dark:border-gray-700 hover:border-primary/30 transition-all duration-300">
+                <div className="group bg-slate-900 p-10 rounded-[2.5rem] shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-slate-700 hover:border-primary/30 transition-all duration-300">
                     <div className="mb-6">
-                        <span className="font-black text-6xl text-slate-200 dark:text-white">01</span>
+                        <span className="font-black text-6xl text-white/20 group-hover:text-white/40 transition-colors">01</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">サイズ入力</h3>
-                    <div className="relative w-full aspect-[4/3] bg-slate-100 dark:bg-gray-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-gray-700 mb-6 flex items-center justify-center p-6">
+                    <h3 className="text-2xl font-bold mb-6 text-white">サイズ入力</h3>
+                    <div className="relative w-full aspect-[4/3] bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 mb-6 flex items-center justify-center p-6">
                         {/* iOS Style Input Field Mockup */}
-                        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 p-4 space-y-3">
+                        <div className="w-full bg-white rounded-2xl shadow-lg border border-slate-200 p-4 space-y-3">
                             <div className="flex justify-between items-center border-b border-slate-100 pb-2">
                                 <span className="text-sm font-medium text-slate-500">幅 (Width)</span>
                                 <span className="text-lg font-bold text-slate-900">120 <span className="text-xs text-slate-400">cm</span></span>
@@ -35,18 +35,18 @@ export default function Demo() {
                             </div>
                         </div>
                     </div>
-                    <p className="text-slate-600 dark:text-gray-300 text-base leading-relaxed">
+                    <p className="text-slate-300 text-base leading-relaxed">
                         お手元の箱の「縦・横・高さ」の3辺を入力。定型サイズからの選択も可能です。
                     </p>
                 </div>
-                <div className="group bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-slate-100 dark:border-gray-700 hover:border-primary/30 transition-all duration-300">
+                <div className="group bg-slate-900 p-10 rounded-[2.5rem] shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-slate-700 hover:border-primary/30 transition-all duration-300">
                     <div className="mb-6">
-                        <span className="font-black text-6xl text-slate-200 dark:text-white">02</span>
+                        <span className="font-black text-6xl text-white/20 group-hover:text-white/40 transition-colors">02</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">重さ入力</h3>
-                    <div className="relative w-full aspect-[4/3] bg-slate-100 dark:bg-gray-900 rounded-3xl overflow-hidden border border-slate-200 dark:border-gray-700 mb-6 flex items-center justify-center p-6">
+                    <h3 className="text-2xl font-bold mb-6 text-white">重さ入力</h3>
+                    <div className="relative w-full aspect-[4/3] bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 mb-6 flex items-center justify-center p-6">
                         {/* iOS Style Weight Picker Mockup */}
-                        <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex items-center justify-between">
+                        <div className="w-full bg-white rounded-2xl shadow-lg border border-slate-200 p-6 flex items-center justify-between">
                             <div className="bg-slate-100 rounded-full w-10 h-10 flex items-center justify-center text-slate-400">
                                 <span className="material-symbols-outlined">remove</span>
                             </div>
@@ -59,31 +59,31 @@ export default function Demo() {
                             </div>
                         </div>
                     </div>
-                    <p className="text-slate-600 dark:text-gray-300 text-base leading-relaxed">
+                    <p className="text-slate-300 text-base leading-relaxed">
                         数値を入力するだけで重量を指定。入力の手間を最小限に抑えています。
                     </p>
                 </div>
-                <div className="group bg-white dark:bg-gray-800 p-10 rounded-[2.5rem] shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-slate-100 dark:border-gray-700 hover:border-primary/30 transition-all duration-300">
+                <div className="group bg-slate-900 p-10 rounded-[2.5rem] shadow-[0_8px_40px_rgb(0,0,0,0.03)] border border-slate-700 hover:border-primary/30 transition-all duration-300">
                     <div className="mb-6">
-                        <span className="font-black text-6xl text-slate-200 dark:text-white">03</span>
+                        <span className="font-black text-6xl text-white/20 group-hover:text-white/40 transition-colors">03</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">輸送方法</h3>
-                    <div className="relative w-full aspect-[4/3] bg-slate-100 dark:bg-slate-800 rounded-3xl overflow-hidden border border-slate-200 dark:border-gray-700 mb-6 flex items-center justify-center shadow-inner">
+                    <h3 className="text-2xl font-bold mb-6 text-white">輸送方法</h3>
+                    <div className="relative w-full aspect-[4/3] bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 mb-6 flex items-center justify-center shadow-inner">
                         <svg className="w-full h-full" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <pattern id="grid-pattern" width="100" height="100" patternUnits="userSpaceOnUse">
-                                    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" strokeWidth="8" className="dark:stroke-slate-700" opacity="0.8" />
-                                    <path d="M 50 0 L 50 100 M 0 50 L 100 50" fill="none" stroke="white" strokeWidth="4" className="dark:stroke-slate-700" opacity="0.5" />
+                                    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" strokeWidth="8" className="stroke-slate-200" opacity="0.8" />
+                                    <path d="M 50 0 L 50 100 M 0 50 L 100 50" fill="none" stroke="white" strokeWidth="4" className="stroke-slate-200" opacity="0.5" />
                                 </pattern>
                             </defs>
 
                             {/* Map Background (Roads) */}
-                            <rect width="100%" height="100%" fill="#f1f5f9" className="dark:fill-slate-800" />
+                            <rect width="100%" height="100%" fill="#f8fafc" />
                             <rect width="100%" height="100%" fill="url(#grid-pattern)" />
 
                             {/* Irregular Roads / Highways */}
-                            <path d="M-20,220 C100,200 150,280 250,250 S350,150 420,180" fill="none" stroke="white" strokeWidth="12" className="dark:stroke-slate-700" />
-                            <path d="M150,320 L180,-20" fill="none" stroke="white" strokeWidth="10" className="dark:stroke-slate-700" />
+                            <path d="M-20,220 C100,200 150,280 250,250 S350,150 420,180" fill="none" stroke="white" strokeWidth="12" className="stroke-slate-300" />
+                            <path d="M150,320 L180,-20" fill="none" stroke="white" strokeWidth="10" className="stroke-slate-300" />
 
                             {/* Navigation Route */}
                             <path
@@ -119,7 +119,7 @@ export default function Demo() {
                             </g>
                         </svg>
                     </div>
-                    <p className="text-slate-600 dark:text-gray-300 text-base leading-relaxed">
+                    <p className="text-slate-300 text-base leading-relaxed">
                         サイズや重量に合わせて、最適な輸送手段を自動選定。迷うことなく手配できます。
                     </p>
                 </div>

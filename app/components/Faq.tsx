@@ -36,18 +36,18 @@ export default function Faq() {
     };
 
     return (
-        <section id="faq" className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans transition-colors duration-200 antialiased">
+        <section id="faq" className="bg-slate-900 text-slate-100 font-sans transition-colors duration-200 antialiased">
             <main className="max-w-[1440px] mx-auto px-6 lg:px-24 py-20 lg:py-32">
                 <div className="text-center mb-16 lg:mb-24">
                     <span className="inline-block px-5 py-1.5 rounded-full bg-primary/5 text-primary text-sm font-bold mb-6 tracking-widest uppercase">FAQ</span>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-8">よくあるご質問</h2>
-                    <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8">よくあるご質問</h2>
+                    <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
                         ラクハコキットのご利用にあたって、<br className="hidden md:block" />多く寄せられるお問い合わせをまとめました。
                     </p>
                 </div>
                 <div className="space-y-4 max-w-4xl mx-auto">
                     {faqs.map((faq, index) => (
-                        <div key={index} className={`group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all duration-300 rounded-3xl overflow-hidden ${openIndex === index ? 'border-primary/20 shadow-lg' : 'hover:border-primary/20 hover:shadow-lg'}`}>
+                        <div key={index} className={`group bg-slate-800 border border-slate-700 transition-all duration-300 rounded-3xl overflow-hidden ${openIndex === index ? 'border-primary/20 shadow-lg' : 'hover:border-primary/20 hover:shadow-lg'}`}>
                             <button
                                 onClick={() => toggle(index)}
                                 className="w-full flex cursor-pointer items-center justify-between gap-6 p-6 lg:p-8 select-none transition-colors text-left"
@@ -56,7 +56,7 @@ export default function Faq() {
                                     <div className={`flex size-10 shrink-0 items-center justify-center rounded-xl transition-colors ${openIndex === index ? 'bg-primary text-white' : 'bg-primary/10 text-primary'}`}>
                                         <span className="font-display font-bold text-lg">Q{index + 1}</span>
                                     </div>
-                                    <h3 className="text-slate-900 dark:text-white text-base lg:text-lg font-bold leading-tight">
+                                    <h3 className="text-white text-base lg:text-lg font-bold leading-tight">
                                         {faq.q}
                                     </h3>
                                 </div>
@@ -67,12 +67,12 @@ export default function Faq() {
                             <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${openIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
                                 <div className="overflow-hidden">
                                     <div className="px-6 lg:px-8 pb-8">
-                                        <div className="flex gap-6 border-t border-slate-100 dark:border-slate-700/50 pt-6">
-                                            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl text-slate-300 dark:text-slate-600">
+                                        <div className="flex gap-6 border-t border-slate-700/50 pt-6">
+                                            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl text-slate-500">
                                                 <span className="font-display font-bold text-lg">A</span>
                                             </div>
                                             <div className="pt-1">
-                                                <p className="text-slate-600 dark:text-slate-300 text-sm lg:text-base leading-relaxed">
+                                                <p className="text-slate-300 text-sm lg:text-base leading-relaxed">
                                                     {faq.a}
                                                 </p>
                                             </div>
@@ -84,7 +84,7 @@ export default function Faq() {
                     ))}
                 </div>
 
-                <div className="mt-24 p-12 lg:p-20 rounded-[3rem] bg-slate-900 dark:bg-slate-800 text-white relative overflow-hidden text-center lg:text-left">
+                <div className="mt-24 p-12 lg:p-20 rounded-[3rem] bg-slate-800 text-white relative overflow-hidden text-center lg:text-left">
                     <div className="relative z-10 flex flex-col items-center justify-center">
                         <div className="max-w-3xl text-center mb-12">
                             <h3 className="text-3xl lg:text-4xl font-bold mb-6">解決しない場合はこちら</h3>

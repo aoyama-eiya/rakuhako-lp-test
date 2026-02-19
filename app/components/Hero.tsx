@@ -20,11 +20,11 @@ export default function Hero() {
             </nav>
             <main className="relative min-h-[900px] lg:h-screen flex flex-col overflow-hidden bg-slate-50">
                 {/* Background Image Container - Right Side */}
-                <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full z-0">
+                <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] h-full z-0 overflow-hidden">
                     <img
                         src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/fa-sutobyu-detukatte.jpg`}
                         alt="Background"
-                        className="w-full h-full object-cover object-center lg:object-left blur-sm"
+                        className="w-full h-full object-cover object-center lg:object-left blur-[1px] scale-105"
                     />
                     {/* Gradient Overlay for Fade Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/20 to-transparent lg:via-transparent"></div>
