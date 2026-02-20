@@ -38,10 +38,10 @@ const reviews = [
 
 export default function Reviews() {
     return (
-        <section className="py-24 bg-white dark:bg-slate-900 overflow-hidden">
+        <section className="py-24 bg-slate-900 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+                    <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">
                         導入企業様の声
                     </h2>
                 </div>
@@ -49,7 +49,7 @@ export default function Reviews() {
                 {/* Horizontal Scroll Carousel */}
                 <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 px-4 -mx-4 md:grid md:grid-cols-3 md:overflow-visible md:pb-0 md:px-0 scrollbar-hide">
                     {reviews.map((review) => (
-                        <div key={review.id} className="snap-center shrink-0 w-[85vw] md:w-auto flex flex-col bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-lg border border-slate-100 dark:border-slate-700 h-full">
+                        <div key={review.id} className="snap-center shrink-0 w-[85vw] md:w-auto flex flex-col bg-slate-800 rounded-3xl p-8 shadow-lg border border-slate-700 h-full">
                             {/* Google Review Style Header */}
                             <div className="flex items-center gap-4 mb-4">
                                 <div
@@ -62,8 +62,8 @@ export default function Reviews() {
                                     }}
                                 ></div>
                                 <div>
-                                    <h3 className="font-bold text-slate-900 dark:text-white text-base">{review.company}</h3>
-                                    <p className="text-xs text-slate-500 dark:text-slate-400">{review.role}</p>
+                                    <h3 className="font-bold text-white text-base">{review.company}</h3>
+                                    <p className="text-xs text-slate-400">{review.role}</p>
                                 </div>
                             </div>
 
@@ -77,7 +77,7 @@ export default function Reviews() {
                             </div>
 
                             {/* Text with paragraphs */}
-                            <div className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed font-medium space-y-3">
+                            <div className="text-slate-300 text-sm leading-relaxed font-medium space-y-3">
                                 {review.paragraphs.map((p, idx) => (
                                     <p key={idx}>{idx === 0 ? `"${p}` : idx === review.paragraphs.length - 1 ? `${p}"` : p}</p>
                                 ))}

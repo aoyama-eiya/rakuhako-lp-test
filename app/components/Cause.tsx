@@ -104,22 +104,8 @@ export default function Cause() {
                         </div>
                     </div>
                 </div>
-                {/* マーカー受けトレイ */}
-                <div className="relative mx-8 h-8 rounded-b-lg" style={{
-                    background: 'linear-gradient(180deg, #b0b0b0, #808080)',
-                    boxShadow: '0 6px 12px rgba(0,0,0,0.2)'
-                }}>
-                    <div className="absolute top-0 left-0 right-0 h-2" style={{
-                        background: 'linear-gradient(180deg, rgba(255,255,255,0.35), transparent)'
-                    }}></div>
-                    {/* マーカーペン */}
-                    <div className="absolute top-2 left-1/2 -translate-x-1/2 flex gap-4">
-                        <div className="w-24 h-4 rounded-full bg-red-500 shadow-sm"></div>
-                        <div className="w-24 h-4 rounded-full bg-blue-500 shadow-sm"></div>
-                        <div className="w-24 h-4 rounded-full bg-green-500 shadow-sm"></div>
-                        <div className="w-16 h-4 rounded-full bg-slate-800 shadow-sm"></div>
-                    </div>
-                </div>
+
+
             </div>
         </section>
     );

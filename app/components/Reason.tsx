@@ -32,8 +32,8 @@ export default function Reason() {
                     <div className="flex flex-col justify-center">
                         <div className="bg-white/5 rounded-[2.5rem] p-10 md:p-14 shadow-xl border border-white/10">
                             <div className="space-y-8">
-                                <div>
-                                    <h3 className="text-3xl md:text-4xl font-black text-white leading-tight">
+                                <div style={{ containerType: 'inline-size' }}>
+                                    <h3 className="font-black text-white leading-tight whitespace-nowrap" style={{ fontSize: 'min(7cqw, 2.25rem)' }}>
                                         最大の原因は、<br />
                                         <span className="text-red-400">「ベテラン職人への依存」</span>です。
                                     </h3>

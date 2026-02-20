@@ -24,7 +24,7 @@ export default function Hero() {
                     <img
                         src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/fa-sutobyu-detukatte.jpg`}
                         alt="Background"
-                        className="w-full h-full object-cover object-center lg:object-left blur-[1px] scale-105"
+                        className="w-full h-full object-cover object-[center_30%] lg:object-[left_30%] blur-[1px] scale-105"
                     />
                     {/* Gradient Overlay for Fade Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-slate-50/20 to-transparent lg:via-transparent"></div>
@@ -34,7 +34,7 @@ export default function Hero() {
                 {/* <div className="absolute inset-0 bg-grid-pattern pointer-events-none -z-10"></div> Removed grid pattern as we have bg image now */}
                 <div className="relative z-10 flex-grow flex items-center">
                     <div className="max-w-[1440px] mx-auto px-12 w-full pt-32 pb-12">
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
                             <div className="flex flex-col">
                                 <div className="mb-8">
                                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/15">
@@ -67,36 +67,38 @@ export default function Hero() {
                                     </button>
                                 </div>
                             </div>
-                            <div className="relative lg:h-[580px] flex items-center justify-center">
-                                {/* Removed the person image container as it is now background */}
-                                <div className="absolute -bottom-12 -left-12 w-[850px] h-auto z-30 hidden lg:block filter drop-shadow-2xl">
-                                    <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/rakuhako-img.png`} alt="Rakuhako Dashboard" className="w-full h-full object-contain" />
-                                </div>
-                                <div className="absolute -bottom-8 -right-8 bg-white p-7 rounded-[2rem] shadow-float border border-slate-100 w-[280px] z-40">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
-                                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Immediate Quote</span>
-                                    </div>
-                                    <div className="flex items-baseline gap-2 mb-4">
-                                        <span className="text-4xl font-black text-slate-900">¥45,000</span>
-                                        <span className="text-sm font-bold text-slate-400">/ set</span>
-                                    </div>
-                                    <div className="space-y-3">
-                                        <div className="h-2 w-full bg-slate-50 rounded-full overflow-hidden">
-                                            <div className="h-full bg-primary w-3/4 rounded-full"></div>
-                                        </div>
-                                        <p className="text-[11px] text-slate-400 font-bold flex items-center gap-1">
-                                            <span className="material-symbols-outlined text-[14px]">bolt</span>
-                                            見積もり完了まで 45秒
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="max-w-[1440px] mx-auto px-12 pb-16 w-full mt-auto">
-                    <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl border border-slate-100 p-8 grid grid-cols-1 md:grid-cols-3 gap-0">
+                {/* PC Dashboard Image - absolute bottom, responsive, visible from md breakpoint */}
+                <div className="absolute bottom-0 right-[2%] z-30 hidden md:block w-[60%] lg:w-[55%] xl:w-[50%] max-w-[900px] filter drop-shadow-2xl">
+                    <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/rakuhako-img.png`} alt="Rakuhako Dashboard" className="w-full h-auto object-contain" />
+                </div>
+                {/* Immediate Quote Card */}
+                <div className="absolute bottom-6 right-[3%] bg-white p-7 rounded-[2rem] shadow-float border border-slate-100 w-[220px] lg:w-[260px] xl:w-[280px] z-40 hidden md:block">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Immediate Quote</span>
+                    </div>
+                    <div className="flex items-baseline gap-2 mb-4">
+                        <span className="text-3xl lg:text-4xl font-black text-slate-900">¥45,000</span>
+                        <span className="text-sm font-bold text-slate-400">/ set</span>
+                    </div>
+                    <div className="space-y-3">
+                        <div className="h-2 w-full bg-slate-50 rounded-full overflow-hidden">
+                            <div className="h-full bg-primary w-3/4 rounded-full"></div>
+                        </div>
+                        <p className="text-[11px] text-slate-400 font-bold flex items-center gap-1">
+                            <span className="material-symbols-outlined text-[14px]">bolt</span>
+                            見積もり完了まで 45秒
+                        </p>
+                    </div>
+                </div>
+            </main>
+            {/* Feature highlights - between Hero and Problem sections */}
+            <section className="bg-slate-50 py-12">
+                <div className="max-w-[1440px] mx-auto px-12 w-full">
+                    <div className="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 grid grid-cols-1 md:grid-cols-3 gap-0">
                         <div className="flex items-center gap-6 px-10 py-2">
                             <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary">
                                 <span className="material-symbols-outlined text-[32px]">schedule</span>
@@ -126,7 +128,7 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
-            </main>
+            </section>
         </>
     );
 }
