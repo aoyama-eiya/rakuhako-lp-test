@@ -119,11 +119,11 @@ export default function Hero() {
                         </div>
                         <div className="flex items-center gap-6 px-10 py-2">
                             <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-primary">
-                                <span className="material-symbols-outlined text-[32px]">currency_yen</span>
+                                <span className="material-symbols-outlined text-[32px]">groups</span>
                             </div>
                             <div>
-                                <p className="text-lg font-black text-slate-900 whitespace-nowrap">コスト削減を実現</p>
-                                <p className="text-sm text-slate-500 font-medium">中間マージンをカット</p>
+                                <p className="text-lg font-black text-slate-900 whitespace-nowrap">属人化しない</p>
+                                <p className="text-sm text-slate-500 font-medium">誰でも同じ品質で発注</p>
                             </div>
                         </div>
                     </div>

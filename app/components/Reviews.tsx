@@ -6,6 +6,7 @@ const reviews = [
         company: "産業機械メーカー",
         role: "営業事務（30代女性）",
         bgPos: "10% 15%",
+        reviewTitle: "見積もり待ちのストレスから解放",
         paragraphs: [
             "以前は急な出荷依頼が入るたびに梱包業者に電話をかけまくり、FAXで図面を送って見積もり待ち…という繰り返しでした。返事が来るまで2〜3日かかることもザラで、その間ずっとソワソワしながら本来の営業事務の仕事が手につかない日々。",
             "ラクハコキット導入後は、サイズと重さを入力するだけで即座に概算価格が表示されるので、見積もり待ちの時間が「2日」から「10秒」に激減しました。",
@@ -17,6 +18,7 @@ const reviews = [
         company: "機械部品商社",
         role: "物流マネージャー（40代男性）",
         bgPos: "50% 15%",
+        reviewTitle: "海外物流の調整が劇的に改善",
         paragraphs: [
             "弊社は海外への出荷が多く、梱包だけでなくLCL（船積み）の手配や通関書類の準備まで、複数の業者に個別に連絡を取る必要がありました。業者間で情報がうまく共有されず、いわゆる『伝言ゲーム』状態。納期遅れやミスが頻発していました。",
             "ラクハコキットを導入してからは、梱包から輸送手配まで一括で相談・依頼できるようになり、リードタイムが従来の約半分に短縮。",
@@ -28,6 +30,7 @@ const reviews = [
         company: "電子部品メーカー",
         role: "購買担当（50代男性）",
         bgPos: "90% 15%",
+        reviewTitle: "会議中に即概算、社内調整が激減",
         paragraphs: [
             "長年この業界にいますが、梱包のコストと納期の見通しが立たないことが最大のストレスでした。上長から『いくらかかる？いつ届く？』と聞かれても、業者の返答待ちで即答できず、社内調整に半日以上費やすことも珍しくありませんでした。",
             "導入後は必要な条件を入力するだけで全体像が一目で把握できるため、会議中にその場で概算を提示できるようになりました。調整業務にかかっていた半日の作業が数十分で完了し、購買判断そのものに集中できる環境が整いました。",
@@ -69,12 +72,15 @@ export default function Reviews() {
 
                             {/* Stars */}
                             <div className="flex gap-1 mb-4 text-yellow-400">
-                                <span className="material-symbols-outlined text-[20px] fill-1">star</span>
-                                <span className="material-symbols-outlined text-[20px] fill-1">star</span>
-                                <span className="material-symbols-outlined text-[20px] fill-1">star</span>
-                                <span className="material-symbols-outlined text-[20px] fill-1">star</span>
-                                <span className="material-symbols-outlined text-[20px] fill-1">star</span>
+                                <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                                <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                                <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                                <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                                <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                             </div>
+
+                            {/* Review Title */}
+                            <h4 className="text-white font-bold text-base mb-3">{review.reviewTitle}</h4>
 
                             {/* Text with paragraphs */}
                             <div className="text-slate-300 text-sm leading-relaxed font-medium space-y-3">

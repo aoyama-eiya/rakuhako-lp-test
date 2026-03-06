@@ -6,174 +6,168 @@ const episodes = [
     {
         id: 1,
         title: "見積もりに関するやりとりが手間",
+        chatPartner: "梱包業者 A社",
         chat: [
             {
                 side: "left",
-                icon: "badge", // Vendor
+                icon: "badge",
                 name: "梱包業者 A社",
-                text: "今回の見積もりですが、サイズ確認のため一度持ち帰らせてください。"
+                text: "サイズ確認のため一度持ち帰らせてください。"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "えっ、図面送りましたよね？"
+                text: "図面送りましたよね？"
             },
             {
                 side: "left",
-                icon: "badge", // Vendor
+                icon: "badge",
                 name: "梱包業者 A社",
-                text: "念のため現物も見たくて... 来週また伺います。"
+                text: "現物も見たくて...来週また伺います。"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "来週！？金曜までに出荷しないといけないんです！"
+                text: "来週！？金曜に出荷なんです！"
             },
             {
                 side: "left",
-                icon: "badge", // Vendor
+                icon: "badge",
                 name: "梱包業者 A社",
-                text: "あー、そこまでは予定がいっぱいでして..."
+                text: "そこまでは予定がいっぱいでして..."
             },
             {
                 side: "right",
                 type: "thought",
-                text: "マジか... こんなことなら他の業者に頼めばよかった..."
-            },
-            {
-                side: "right",
-                type: "thought",
-                text: "見積もりのやり取りだけで、もう3往復目...手間すぎる..."
+                text: "見積もりだけで3往復目...手間すぎる..."
             }
         ]
     },
     {
         id: 2,
         title: "夕方17時の急な出荷依頼",
+        chatPartner: "営業部 田中",
         chat: [
             {
                 side: "left",
-                icon: "schedule", // Clock/Urgent
-                name: "営業担当",
-                text: "急ぎで明日着の便、まだ間に合う？頼むよ！"
+                icon: "schedule",
+                name: "営業部 田中",
+                text: "急ぎで明日着、まだ間に合う？"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "えっ、もう集荷終わってますよ..."
+                text: "もう集荷終わってますよ..."
             },
             {
                 side: "left",
-                icon: "schedule", // Clock/Urgent
-                name: "営業担当",
-                text: "そこをなんとか！お客様めちゃくちゃお怒りなんだよ。"
+                icon: "schedule",
+                name: "営業部 田中",
+                text: "なんとかして！お客様がお怒りで。"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "今から梱包しても、トラックとんぼ返りさせるなんて無理です。"
+                text: "今から梱包しても無理です。"
             },
             {
                 side: "left",
-                icon: "schedule", // Clock/Urgent
-                name: "営業担当",
+                icon: "schedule",
+                name: "営業部 田中",
                 text: "営業所に持ち込みできない？"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "2トンですよ！？運べるわけないじゃないですか！"
+                text: "2トンですよ！？無理です！"
             },
             {
                 side: "right",
                 type: "thought",
-                text: "もう17時...今から梱包材を手配して梱包なんて絶対無理だ..."
+                text: "もう17時...絶対間に合わない..."
             }
         ]
     },
     {
         id: 3,
         title: "業者の電話が繋がらない",
+        chatPartner: "梱包業者 B社",
         chat: [
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "（プルルル...）あー、また話し中！集荷依頼できない！"
+                text: "また話し中！集荷依頼できない！"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "これで5回目だぞ...早くしてくれ..."
+                text: "これで5回目だぞ..."
             },
             {
                 side: "left",
-                icon: "call_end", // Busy
+                icon: "call_end",
                 name: "梱包業者 B社",
-                text: "ただいま電話に出ることができません。ピーッという発信音の後に..."
+                text: "ただいま電話に出ることができません。"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "また留守電かよ！段ボールの在庫あるか確認したいだけなのに。"
+                text: "また留守電！在庫確認したいだけなのに。"
             },
             {
                 side: "right",
                 type: "thought",
-                text: "もう！他の業者探す時間もないのに！"
+                text: "他の業者探す時間もない！"
             }
         ]
     },
     {
         id: 4,
         title: "上司に即答できない無力感",
+        chatPartner: "上司",
         chat: [
             {
                 side: "left",
-                icon: "supervisor_account", // Boss
-                name: "上長",
-                text: "例の案件、コストいくらかかりそう？会議で使うから今すぐ教えて。"
+                icon: "supervisor_account",
+                name: "上司",
+                text: "コストいくら？会議で使うから今すぐ教えて。"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "あ、はい。今業者に見積もり依頼中でして..."
+                text: "今業者に見積もり依頼中でして..."
             },
             {
                 side: "left",
-                icon: "supervisor_account", // Boss
-                name: "上長",
-                text: "まだ？昨日頼んだよね？概算でいいから早く出してよ。"
+                icon: "supervisor_account",
+                name: "上司",
+                text: "昨日頼んだよね？概算でいいから早く。"
             },
             {
                 side: "right",
                 icon: "person",
                 name: "あなた",
-                text: "現物見ないと概算も出せないと言われまして..."
+                text: "現物見ないと出せないと言われまして..."
             },
             {
                 side: "left",
-                icon: "supervisor_account", // Boss
-                name: "上長",
-                text: "だから仕事遅いんだよ。適当でいいから出して！"
+                icon: "supervisor_account",
+                name: "上司",
+                text: "適当でいいから出して！"
             },
             {
                 side: "right",
                 type: "thought",
-                text: "（適当に出して間違ってたら怒るくせに...）"
-            },
-            {
-                side: "right",
-                type: "thought",
-                text: "すみません...まだ業者から返事がなくて...（また怒られる...）"
+                text: "適当に出して間違ったら怒るくせに..."
             }
         ]
     }
@@ -208,8 +202,8 @@ export default function Problem() {
                             {/* Right: Smartphone Interaction */}
                             <div className="relative mx-auto w-full max-w-[350px]">
                                 {/* Phone Frame */}
-                                <div className="relative border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] shadow-xl">
-                                    <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute z-20"></div>
+                                <div className="relative border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[750px] shadow-xl">
+                                    <div className="w-[148px] h-[28px] bg-gray-800 top-0 rounded-b-[18px] left-1/2 -translate-x-1/2 absolute z-20"></div>
                                     <div className="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
                                     <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
                                     <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
@@ -218,12 +212,11 @@ export default function Problem() {
                                     {/* Screen */}
                                     <div className="rounded-[2rem] overflow-hidden w-full h-full bg-slate-50 relative flex flex-col">
                                         {/* Status Bar Mock */}
-                                        <div className="h-8 bg-slate-100 w-full shrink-0 z-10 flex items-center justify-between px-6 text-[10px] text-slate-500 font-bold">
+                                        <div className="h-10 bg-slate-100 w-full shrink-0 z-10 flex items-center justify-between px-6 text-[12px] text-slate-500 font-bold">
                                             <span>9:41</span>
-                                            <div className="flex gap-1">
-                                                <span className="material-symbols-outlined text-[10px]">signal_cellular_alt</span>
-                                                <span className="material-symbols-outlined text-[10px]">wifi</span>
-                                                <span className="material-symbols-outlined text-[10px]">battery_full</span>
+                                            <div className="flex gap-1 items-center">
+                                                <span className="material-symbols-outlined text-[14px]">wifi</span>
+                                                <span className="material-symbols-outlined text-[16px] -mt-[1px]">battery_horiz_075</span>
                                             </div>
                                         </div>
 
@@ -232,11 +225,11 @@ export default function Problem() {
                                             <div className="w-8 h-8 rounded-full bg-slate-300 flex items-center justify-center text-white">
                                                 <span className="material-symbols-outlined text-sm">person</span>
                                             </div>
-                                            <span className="text-xs font-bold text-slate-700">Message</span>
+                                            <span className="text-xs font-bold text-slate-700">{episode.chatPartner}</span>
                                         </div>
 
                                         {/* Chat Content */}
-                                        <div className="flex-1 overflow-y-auto p-4 space-y-4 no-scrollbar">
+                                        <div className="flex-1 overflow-hidden p-4 space-y-4">
                                             {episode.chat.map((msg, idx) => (
                                                 <div key={idx} className={`flex items-end gap-2 ${msg.side === 'right' ? 'justify-end' : ''}`}>
                                                     {msg.side === 'left' && (
