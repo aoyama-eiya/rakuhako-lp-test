@@ -60,77 +60,80 @@ export default function LaptopDemo() {
               className="absolute inset-0 bg-black rounded-t-xl md:rounded-t-2xl border-[4px] border-black border-b-[24px] shadow-[0_5px_15px_rgba(0,0,0,0.5)] overflow-hidden"
               style={{ transform: "translateZ(-2px)", backfaceVisibility: "hidden" }}
             >
-              {/* Screen Content UI */}
-              <div className="w-full h-full bg-slate-50 relative flex flex-col z-30">
-                <div className="flex-1 w-full bg-slate-50 relative p-2 md:p-4 select-none flex flex-col font-sans h-full">
-                  <div className="text-center font-bold text-slate-800 text-[10px] md:text-sm mb-2 md:mb-4">
-                    寸法の測り方（長さ・幅・高さ）
+              {/* Screen Content - Scrolling Mockup */}
+              <div className="w-full h-full bg-[#f8fafc] relative overflow-hidden">
+                {/* Browser UI Bar */}
+                <div className="absolute top-0 left-0 right-0 h-6 bg-slate-100 border-b border-slate-200 z-50 flex items-center px-2 gap-1.5">
+                  <div className="flex gap-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-amber-400"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400"></div>
                   </div>
-                  <div className="flex-1 flex flex-col md:flex-row gap-2 md:gap-4 overflow-hidden pb-1">
-                    {/* Left Column */}
-                    <div className="flex-[0.9] bg-white rounded-lg shadow-sm border border-slate-200 p-2 md:p-3 flex flex-col h-full overflow-y-auto no-scrollbar">
-                      <div className="w-full relative min-h-[70px] flex-shrink-0 flex items-center justify-center mb-2">
-                        <img src="https://rakuhakokit-54w78bp96-genly-projects.vercel.app/images/box-dimensions.svg" alt="箱寸法" className="w-[100px] md:w-[130px] object-contain" />
-                      </div>
-                      <div className="flex items-center gap-1.5 mb-2 mt-auto">
-                        <span className="bg-[#1e1e1e] text-white text-[8px] md:text-[10px] font-bold px-1.5 py-0.5 rounded-full whitespace-nowrap">STEP 1</span>
-                        <span className="text-[10px] md:text-xs font-bold text-slate-800 leading-tight">運びたいモノの<br />大きさ・重さを入力</span>
-                      </div>
-                      <div className="grid grid-cols-2 gap-1.5 md:gap-2">
-                        {['長さ', '幅', '高さ'].map((label) => (
-                          <div key={label} className="flex flex-col gap-0.5">
-                            <label className="text-[8px] md:text-[9px] text-slate-500 font-bold">{label}</label>
-                            <div className="bg-slate-50 border border-slate-200 rounded px-1.5 py-1 flex items-center justify-between">
-                              <span className="text-xs md:text-sm font-bold text-slate-800">{label === '長さ' ? '300' : '100'}</span>
-                              <span className="text-[8px] md:text-[10px] text-slate-400 font-bold">mm</span>
-                            </div>
-                          </div>
-                        ))}
-                        <div className="flex flex-col gap-0.5">
-                          <label className="text-[8px] md:text-[9px] text-slate-500 font-bold">重さ</label>
-                          <div className="bg-slate-50 border border-slate-200 rounded px-1.5 py-1 flex items-center justify-between">
-                            <span className="text-xs md:text-sm font-bold text-slate-800">10</span>
-                            <span className="text-[8px] md:text-[10px] text-slate-400 font-bold">kg</span>
-                          </div>
-                        </div>
+                  <div className="flex-1 bg-white rounded h-3.5 mx-2 border border-slate-200 flex items-center px-2">
+                    <div className="text-[6px] text-slate-400 truncate">rakuhakokit-54w78bp96-genly-projects.vercel.app</div>
+                  </div>
+                </div>
+
+                {/* Animated Content Container */}
+                <motion.div 
+                  className="w-full absolute top-6"
+                  animate={{ y: ["0%", "-75%"] }}
+                  transition={{ 
+                    duration: 15, 
+                    repeat: Infinity, 
+                    ease: "linear",
+                    repeatType: "loop"
+                  }}
+                >
+                  {/* Mock Site Content Sections */}
+                  <div className="p-4 space-y-4">
+                    {/* Hero Section Mockup */}
+                    <div className="aspect-[16/9] bg-white rounded-lg shadow-sm border border-slate-200 p-4 flex flex-col justify-center gap-2">
+                      <div className="h-4 bg-slate-900 w-2/3 rounded"></div>
+                      <div className="h-2 bg-slate-300 w-1/2 rounded"></div>
+                      <div className="mt-2 h-6 bg-primary w-1/4 rounded"></div>
+                      <div className="mt-4 aspect-video bg-slate-50 rounded flex items-center justify-center">
+                        <img src="/img/rakuhako-img.png" alt="Rakuhako" className="w-full h-full object-cover rounded" />
                       </div>
                     </div>
 
-                    {/* Right Column */}
-                    <div className="flex-[1.1] flex flex-col gap-2 md:gap-3 h-full overflow-y-auto no-scrollbar">
-                      <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-2 md:p-3 flex-shrink-0">
-                        <div className="flex items-center gap-1.5 mb-2">
-                          <span className="bg-[#1e1e1e] text-white text-[8px] md:text-[10px] font-bold px-1.5 py-0.5 rounded-full whitespace-nowrap">STEP 2</span>
-                          <span className="text-[10px] md:text-xs font-bold text-slate-800">運びたいモノの種類</span>
-                        </div>
-                        <div className="flex gap-1.5 md:gap-2">
-                          <div className="flex-1 bg-slate-800 border-2 border-slate-800 text-white text-[9px] md:text-[10px] font-bold text-center py-1.5 md:py-2 rounded-md">通常品</div>
-                          <div className="flex-1 bg-white border border-slate-200 text-slate-500 text-[9px] md:text-[10px] font-bold text-center py-1.5 md:py-2 rounded-md">ワレモノ</div>
-                        </div>
+                    {/* Feature 1 */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="aspect-square bg-white rounded-lg shadow-sm border border-slate-200 p-2">
+                        <img src="/img/sokujiwakaru.png" alt="Feature 1" className="w-full h-full object-cover rounded" />
+                        <div className="mt-2 h-2 bg-slate-800 w-full rounded"></div>
                       </div>
-                      <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-2 md:p-3 flex-shrink-0">
-                        <div className="flex items-center gap-1.5 mb-2">
-                          <span className="bg-[#1e1e1e] text-white text-[8px] md:text-[10px] font-bold px-1.5 py-0.5 rounded-full whitespace-nowrap">STEP 3</span>
-                          <span className="text-[10px] md:text-xs font-bold text-slate-800">輸送先を入力</span>
-                        </div>
-                        <div className="grid grid-cols-2 gap-1.5">
-                          <div className="col-span-2 bg-slate-800 border-2 border-slate-800 text-white text-[9px] md:text-[10px] font-bold text-center py-1.5 md:py-2 rounded-md">国内（短距離）</div>
-                          <div className="bg-white border border-slate-200 text-slate-500 text-[9px] md:text-[10px] font-bold text-center py-1.5 md:py-2 rounded-md">国内（長距離）</div>
-                          <div className="bg-white border border-slate-200 text-slate-500 text-[9px] md:text-[10px] font-bold text-center py-1.5 md:py-2 rounded-md">海外</div>
-                        </div>
-                      </div>
-                      <div className="flex gap-2 mt-auto pt-1 flex-shrink-0">
-                        <div className="flex-[0.8] bg-white border border-slate-200 text-slate-600 font-bold text-[9px] md:text-xs py-1.5 md:py-2 rounded-md text-center shadow-sm flex items-center justify-center">
-                          リセット
-                        </div>
-                        <div className="flex-[1.2] bg-slate-900 text-white font-bold text-[9px] md:text-xs py-1.5 md:py-2 rounded-md text-center shadow-md flex items-center justify-center gap-1">
-                          <span className="material-symbols-outlined text-[14px]">search</span>
-                          探す
-                        </div>
+                      <div className="aspect-square bg-white rounded-lg shadow-sm border border-slate-200 p-2">
+                        <img src="/img/sinntyokugawakaru.png" alt="Feature 2" className="w-full h-full object-cover rounded" />
+                        <div className="mt-2 h-2 bg-slate-800 w-full rounded"></div>
                       </div>
                     </div>
+
+                    {/* Step Section Mockup */}
+                    <div className="bg-slate-900 rounded-lg p-4 space-y-4">
+                      <div className="h-3 bg-white/20 w-1/3 rounded mx-auto"></div>
+                      {[1, 2, 3].map(i => (
+                        <div key={i} className="flex gap-3 items-center">
+                          <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold text-white">{i}</div>
+                          <div className="h-2 bg-white/10 flex-1 rounded"></div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Feature 2 */}
+                    <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-4 space-y-3">
+                      <div className="h-3 bg-slate-800 w-1/2 rounded"></div>
+                      <div className="aspect-video bg-slate-100 rounded overflow-hidden">
+                         <img src="/img/saityuumonsiyasui.png" alt="Feature 3" className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+
+                    {/* Footer Mockup */}
+                    <div className="h-32 bg-slate-200 rounded-t-lg flex items-center justify-center">
+                      <div className="h-4 bg-slate-400 w-1/4 rounded"></div>
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
 
