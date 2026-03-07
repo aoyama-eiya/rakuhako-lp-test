@@ -60,9 +60,9 @@ export default function LaptopDemo() {
               className="absolute inset-0 bg-black rounded-t-xl md:rounded-t-2xl border-[4px] border-black border-b-[24px] shadow-[0_5px_15px_rgba(0,0,0,0.5)] overflow-hidden"
               style={{ transform: "translateZ(-2px)", backfaceVisibility: "hidden" }}
             >
-              {/* Screen Content - Scrolling Mockup */}
-              <div className="w-full h-full bg-[#f8fafc] relative overflow-hidden">
-                {/* Browser UI Bar */}
+              {/* Screen Content - Actual Site Iframe */}
+              <div className="w-full h-full bg-white relative overflow-hidden">
+                {/* Browser UI Bar (Optional but helps realism) */}
                 <div className="absolute top-0 left-0 right-0 h-6 bg-slate-100 border-b border-slate-200 z-50 flex items-center px-2 gap-1.5">
                   <div className="flex gap-1">
                     <div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>
@@ -70,70 +70,41 @@ export default function LaptopDemo() {
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-400"></div>
                   </div>
                   <div className="flex-1 bg-white rounded h-3.5 mx-2 border border-slate-200 flex items-center px-2">
-                    <div className="text-[6px] text-slate-400 truncate">rakuhakokit-54w78bp96-genly-projects.vercel.app</div>
+                    <div className="text-[6px] text-slate-400 truncate">rakuhakokit.vercel.app</div>
                   </div>
                 </div>
 
-                {/* Animated Content Container */}
+                {/* Animated Iframe Container */}
+                {/* 
+                  We load the actual site in a very tall iframe and animate its position.
+                  The scale ensures it fits the laptop screen resolution.
+                */}
                 <motion.div 
                   className="w-full absolute top-6"
-                  animate={{ y: ["0%", "-75%"] }}
+                  style={{ height: "4000px", transformOrigin: "top center" }}
+                  animate={{ y: ["0%", "-80%"] }}
                   transition={{ 
-                    duration: 15, 
+                    duration: 30, 
                     repeat: Infinity, 
                     ease: "linear",
                     repeatType: "loop"
                   }}
                 >
-                  {/* Mock Site Content Sections */}
-                  <div className="p-4 space-y-4">
-                    {/* Hero Section Mockup */}
-                    <div className="aspect-[16/9] bg-white rounded-lg shadow-sm border border-slate-200 p-4 flex flex-col justify-center gap-2">
-                      <div className="h-4 bg-slate-900 w-2/3 rounded"></div>
-                      <div className="h-2 bg-slate-300 w-1/2 rounded"></div>
-                      <div className="mt-2 h-6 bg-primary w-1/4 rounded"></div>
-                      <div className="mt-4 aspect-video bg-slate-50 rounded flex items-center justify-center">
-                        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/rakuhako-img.png`} alt="Rakuhako" className="w-full h-full object-cover rounded" />
-                      </div>
-                    </div>
-
-                    {/* Feature 1 */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="aspect-square bg-white rounded-lg shadow-sm border border-slate-200 p-2">
-                        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/sokujiwakaru.png`} alt="Feature 1" className="w-full h-full object-cover rounded" />
-                        <div className="mt-2 h-2 bg-slate-800 w-full rounded"></div>
-                      </div>
-                      <div className="aspect-square bg-white rounded-lg shadow-sm border border-slate-200 p-2">
-                        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/sinntyokugawakaru.png`} alt="Feature 2" className="w-full h-full object-cover rounded" />
-                        <div className="mt-2 h-2 bg-slate-800 w-full rounded"></div>
-                      </div>
-                    </div>
-
-                    {/* Step Section Mockup */}
-                    <div className="bg-slate-900 rounded-lg p-4 space-y-4">
-                      <div className="h-3 bg-white/20 w-1/3 rounded mx-auto"></div>
-                      {[1, 2, 3].map(i => (
-                        <div key={i} className="flex gap-3 items-center">
-                          <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-[10px] font-bold text-white">{i}</div>
-                          <div className="h-2 bg-white/10 flex-1 rounded"></div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Feature 2 */}
-                    <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-4 space-y-3">
-                      <div className="h-3 bg-slate-800 w-1/2 rounded"></div>
-                      <div className="aspect-video bg-slate-100 rounded overflow-hidden">
-                         <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/saityuumonsiyasui.png`} alt="Feature 3" className="w-full h-full object-cover" />
-                      </div>
-                    </div>
-
-                    {/* Footer Mockup */}
-                    <div className="h-32 bg-slate-200 rounded-t-lg flex items-center justify-center">
-                      <div className="h-4 bg-slate-400 w-1/4 rounded"></div>
-                    </div>
-                  </div>
+                  <iframe 
+                    src="https://rakuhakokit-54w78bp96-genly-projects.vercel.app/" 
+                    className="w-[1280px] h-full border-none pointer-events-none"
+                    style={{ 
+                      transform: "scale(0.35)", // Initial guess for scaling down 1280px to laptop width
+                      transformOrigin: "top left",
+                      width: "300%", // Compensate for scale(0.35) roughly 1/0.35
+                      height: "100%"
+                    }}
+                    title="Rakuhako Kit System"
+                  />
                 </motion.div>
+
+                {/* Glass reflection overlay */}
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/5 to-white/20 z-40"></div>
               </div>
             </div>
 
