@@ -70,28 +70,31 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
-                {/* PC Dashboard Image - absolute bottom, responsive, visible from md breakpoint */}
-                <div className="absolute bottom-0 right-[2%] z-30 hidden md:block w-[60%] lg:w-[55%] xl:w-[50%] max-w-[900px] filter drop-shadow-2xl">
-                    <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/rakuhako-img.png`} alt="Rakuhako Dashboard" className="w-full h-auto object-contain" />
-                </div>
-                {/* Immediate Quote Card */}
-                <div className="absolute bottom-6 right-[3%] bg-white p-7 rounded-[2rem] shadow-float border border-slate-100 w-[220px] lg:w-[260px] xl:w-[280px] z-40 hidden md:block">
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
-                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Immediate Quote</span>
+                {/* Image constraints wrapper for wide screens */}
+                <div className="absolute inset-0 max-w-[1440px] mx-auto w-full h-full pointer-events-none">
+                    {/* PC Dashboard Image - absolute bottom, responsive, visible from md breakpoint */}
+                    <div className="absolute bottom-0 right-12 z-30 hidden md:block w-[60%] lg:w-[55%] xl:w-[50%] max-w-[900px] filter drop-shadow-2xl pointer-events-auto">
+                        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/rakuhako-img.png`} alt="Rakuhako Dashboard" className="w-full h-auto object-contain origin-bottom-right" />
                     </div>
-                    <div className="flex items-baseline gap-2 mb-4">
-                        <span className="text-3xl lg:text-4xl font-black text-slate-900">¥45,000</span>
-                        <span className="text-sm font-bold text-slate-400">/ set</span>
-                    </div>
-                    <div className="space-y-3">
-                        <div className="h-2 w-full bg-slate-50 rounded-full overflow-hidden">
-                            <div className="h-full bg-primary w-3/4 rounded-full"></div>
+                    {/* Immediate Quote Card */}
+                    <div className="absolute bottom-6 right-12 md:right-16 lg:right-20 xl:right-24 bg-white p-7 rounded-[2rem] shadow-float border border-slate-100 w-[220px] lg:w-[260px] xl:w-[280px] z-40 hidden md:block pointer-events-auto">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Immediate Quote</span>
                         </div>
-                        <p className="text-[11px] text-slate-400 font-bold flex items-center gap-1">
-                            <span className="material-symbols-outlined text-[14px]">bolt</span>
-                            見積もり完了まで 45秒
-                        </p>
+                        <div className="flex items-baseline gap-2 mb-4">
+                            <span className="text-3xl lg:text-4xl font-black text-slate-900">¥45,000</span>
+                            <span className="text-sm font-bold text-slate-400">/ set</span>
+                        </div>
+                        <div className="space-y-3">
+                            <div className="h-2 w-full bg-slate-50 rounded-full overflow-hidden">
+                                <div className="h-full bg-primary w-3/4 rounded-full"></div>
+                            </div>
+                            <p className="text-[11px] text-slate-400 font-bold flex items-center gap-1">
+                                <span className="material-symbols-outlined text-[14px]">bolt</span>
+                                見積もり完了まで 45秒
+                            </p>
+                        </div>
                     </div>
                 </div>
             </main>

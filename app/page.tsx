@@ -1,4 +1,5 @@
 import Hero from "@/app/components/Hero";
+import LaptopDemo from "@/app/components/LaptopDemo";
 import Problem from "@/app/components/Problem";
 import Reason from "@/app/components/Reason";
 import Cause from "@/app/components/Cause";
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
+      <LaptopDemo />
       <Problem />
       <Reason />
       <Cause />
