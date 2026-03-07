@@ -93,18 +93,18 @@ export default function LaptopDemo() {
                       <div className="h-2 bg-slate-300 w-1/2 rounded"></div>
                       <div className="mt-2 h-6 bg-primary w-1/4 rounded"></div>
                       <div className="mt-4 aspect-video bg-slate-50 rounded flex items-center justify-center">
-                        <img src="/img/rakuhako-img.png" alt="Rakuhako" className="w-full h-full object-cover rounded" />
+                        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/rakuhako-img.png`} alt="Rakuhako" className="w-full h-full object-cover rounded" />
                       </div>
                     </div>
 
                     {/* Feature 1 */}
                     <div className="grid grid-cols-2 gap-4">
                       <div className="aspect-square bg-white rounded-lg shadow-sm border border-slate-200 p-2">
-                        <img src="/img/sokujiwakaru.png" alt="Feature 1" className="w-full h-full object-cover rounded" />
+                        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/sokujiwakaru.png`} alt="Feature 1" className="w-full h-full object-cover rounded" />
                         <div className="mt-2 h-2 bg-slate-800 w-full rounded"></div>
                       </div>
                       <div className="aspect-square bg-white rounded-lg shadow-sm border border-slate-200 p-2">
-                        <img src="/img/sinntyokugawakaru.png" alt="Feature 2" className="w-full h-full object-cover rounded" />
+                        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/sinntyokugawakaru.png`} alt="Feature 2" className="w-full h-full object-cover rounded" />
                         <div className="mt-2 h-2 bg-slate-800 w-full rounded"></div>
                       </div>
                     </div>
@@ -124,7 +124,7 @@ export default function LaptopDemo() {
                     <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-4 space-y-3">
                       <div className="h-3 bg-slate-800 w-1/2 rounded"></div>
                       <div className="aspect-video bg-slate-100 rounded overflow-hidden">
-                         <img src="/img/saityuumonsiyasui.png" alt="Feature 3" className="w-full h-full object-cover" />
+                         <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/saityuumonsiyasui.png`} alt="Feature 3" className="w-full h-full object-cover" />
                       </div>
                     </div>
 
