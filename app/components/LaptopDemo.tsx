@@ -79,7 +79,7 @@ export default function LaptopDemo() {
                 {/* Video Container */}
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black">
                   <video
-                    src="/img/rakuhako-notedouga.mp4"
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/rakuhako-notedouga.mp4`}
                     className="w-full h-full object-cover pointer-events-none"
                     autoPlay
                     loop
