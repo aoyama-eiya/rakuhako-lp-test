@@ -11,6 +11,10 @@ export default function LaptopDemo() {
     offset: ["start start", "end end"]
   });
 
+  // Text Animation: Fades out quickly as scrolling starts
+  const textOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
+  const textY = useTransform(scrollYProgress, [0, 0.15], [0, -20]);
+
   // 1. Camera Animation:
   // Perfectly straight on. Tilts up slightly as it opens.
   const parentRotateX = useTransform(scrollYProgress, [0, 0.55, 1], [-20, -5, -5]);
@@ -28,6 +32,16 @@ export default function LaptopDemo() {
     <div ref={containerRef} className="relative h-[250vh] bg-slate-50 border-t border-slate-100">
       <div className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden"
         style={{ perspective: 1800 }}>
+
+        {/* Floating Text before opening */}
+        <motion.div
+          className="absolute top-[16%] md:top-[20%] left-0 right-0 z-50 text-center px-4"
+          style={{ opacity: textOpacity, y: textY }}
+        >
+          <h2 className="text-[1.3rem] sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 tracking-tight drop-shadow-sm">
+            ラクハコキットは時間を生み出すシステムです
+          </h2>
+        </motion.div>
 
         {/* Global 3D Wrapper (Camera) */}
         <motion.div
@@ -62,46 +76,17 @@ export default function LaptopDemo() {
             >
               {/* Screen Content - Actual Site Iframe */}
               <div className="w-full h-full bg-white relative overflow-hidden">
-                {/* Browser UI Bar (Optional but helps realism) */}
-                <div className="absolute top-0 left-0 right-0 h-6 bg-slate-100 border-b border-slate-200 z-50 flex items-center px-2 gap-1.5">
-                  <div className="flex gap-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-400"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-amber-400"></div>
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400"></div>
-                  </div>
-                  <div className="flex-1 bg-white rounded h-3.5 mx-2 border border-slate-200 flex items-center px-2">
-                    <div className="text-[6px] text-slate-400 truncate">rakuhakokit.vercel.app</div>
-                  </div>
-                </div>
-
-                {/* Animated Iframe Container */}
-                {/* 
-                  We load the actual site in a very tall iframe and animate its position.
-                  The scale ensures it fits the laptop screen resolution.
-                */}
-                <motion.div 
-                  className="w-full absolute top-6"
-                  style={{ height: "4000px", transformOrigin: "top center" }}
-                  animate={{ y: ["0%", "-80%"] }}
-                  transition={{ 
-                    duration: 30, 
-                    repeat: Infinity, 
-                    ease: "linear",
-                    repeatType: "loop"
-                  }}
-                >
-                  <iframe 
-                    src="https://rakuhakokit-54w78bp96-genly-projects.vercel.app/" 
-                    className="w-[1280px] h-full border-none pointer-events-none"
-                    style={{ 
-                      transform: "scale(0.35)", // Initial guess for scaling down 1280px to laptop width
-                      transformOrigin: "top left",
-                      width: "300%", // Compensate for scale(0.35) roughly 1/0.35
-                      height: "100%"
-                    }}
-                    title="Rakuhako Kit System"
+                {/* Video Container */}
+                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black">
+                  <video
+                    src="/img/rakuhako-notedouga.mp4"
+                    className="w-full h-full object-cover pointer-events-none"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                   />
-                </motion.div>
+                </div>
 
                 {/* Glass reflection overlay */}
                 <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/5 to-white/20 z-40"></div>
